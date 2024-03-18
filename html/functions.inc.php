@@ -31,13 +31,13 @@ function printHeader($pages)
     echo '<!DOCTYPE html><html lang="en">
   <head>
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1495H9FDT5"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-N3Z4EBN2R3"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag(\'js\', new Date());
     
-      gtag(\'config\', \'G-1495H9FDT5\');
+      gtag(\'config\', \'G-N3Z4EBN2R3\');
     </script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
