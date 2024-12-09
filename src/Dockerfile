@@ -4,6 +4,10 @@ FROM nginx:alpine
 # Remove the default Nginx configuration
 RUN rm /etc/nginx/conf.d/default.conf
 
+# Create directories for Nginx temp files
+RUN mkdir -p /tmp/nginx && \
+    chown -R nginx:nginx /tmp/nginx
+
 # Copy custom Nginx configuration
 COPY nginx.conf /etc/nginx/conf.d/
 
