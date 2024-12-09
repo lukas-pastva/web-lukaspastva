@@ -1,15 +1,15 @@
 # Use the official Nginx lightweight image
 FROM nginx:alpine
 
-# Remove the default Nginx configuration
+# Remove the default Nginx site configuration
 RUN rm /etc/nginx/conf.d/default.conf
 
-# Create directories for Nginx temp files
-RUN mkdir -p /tmp/nginx && \
-    chown -R nginx:nginx /tmp/nginx
+# Copy the complete Nginx configuration
+COPY nginx.conf /etc/nginx/nginx.conf
 
-# Copy custom Nginx configuration
-COPY nginx.conf /etc/nginx/conf.d/
+# Create directories for Nginx temp files and set ownership
+RUN mkdir -p /tmp/nginx && \
+    chown -R 100:1000 /tmp/nginx
 
 # Copy the static website files to Nginx's root directory
 COPY html /usr/share/nginx/html
