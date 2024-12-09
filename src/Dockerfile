@@ -1,17 +1,17 @@
-# Use the official Apache image with PHP support (slim version)
-FROM php:8.0-apache-slim
+# Use the official Nginx lightweight image
+FROM nginx:alpine
 
-# Enable Apache's rewrite module
-RUN a2enmod rewrite
+# Remove the default Nginx configuration
+RUN rm /etc/nginx/conf.d/default.conf
 
-# Remove default Apache content
-RUN rm -rf /var/www/html/*
+# Copy custom Nginx configuration
+COPY nginx.conf /etc/nginx/conf.d/
 
-# Copy the static website files to Apache's root directory
-COPY ./html /var/www/html
+# Copy the static website files to Nginx's root directory
+COPY html /usr/share/nginx/html
 
 # Expose port 80
 EXPOSE 80
 
-# Start Apache when the container launches
-CMD ["apache2-foreground"]
+# Start Nginx when the container launches
+CMD ["nginx", "-g", "daemon off;"]
