@@ -3,14 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lukas Pastva - DevOps Extraordinaire</title>
+    <title>Lukáš Pastva — DevOps, Pre‑Sales Architect (and Occasional Chaos Gremlin)</title>
+    <meta name="description" content="Lukáš Pastva — DevOps and Pre‑Sales Architect. Kubernetes, AWS, CI/CD, IaC, Observability. Experience at Trustsoft, DXC, Fiserv, HP. Portfolio with a healthy dose of self‑roast." />
     <style>
-        /* Reset some default styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        /* Reset */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
             font-family: Arial, sans-serif;
@@ -27,51 +24,17 @@
             color: #ffffff;
         }
 
-        header h1 {
-            font-size: 3em;
-            margin-bottom: 10px;
-        }
+        header h1 { font-size: 3em; margin-bottom: 10px; }
+        header p { font-size: 1.2em; color: #cccccc; }
 
-        header p {
-            font-size: 1.2em;
-            color: #cccccc;
-        }
+        .container { max-width: 1100px; margin: auto; overflow: hidden; padding: 0 20px; }
 
-        .container {
-            max-width: 1000px;
-            margin: auto;
-            overflow: hidden;
-            padding: 0 20px;
-        }
-
-        section {
-            margin: 20px 0;
-            background: #ffffff;
-            padding: 20px;
-            border-radius: 5px;
-        }
-
-        h2 {
-            margin-bottom: 15px;
-            color: #35424a;
-        }
-
-        ul {
-            list-style: none;
-        }
-
-        li {
-            margin-bottom: 10px;
-            position: relative;
-            padding-left: 20px;
-        }
-
-        li::before {
-            content: "👉";
-            position: absolute;
-            left: 0;
-            color: #35424a;
-        }
+        section { margin: 20px 0; background: #ffffff; padding: 20px; border-radius: 5px; }
+        h2 { margin-bottom: 15px; color: #35424a; }
+        h3 { margin-bottom: 8px; color: #21313c; }
+        ul { list-style: none; }
+        li { margin-bottom: 10px; position: relative; padding-left: 20px; }
+        li::before { content: "👉"; position: absolute; left: 0; color: #35424a; }
 
         a.button {
             display: inline-block;
@@ -83,97 +46,254 @@
             margin-top: 10px;
         }
 
-        a.button:hover {
-            background: #1f2a30;
-        }
+        a.button:hover { background: #1f2a30; }
+
+        /* Layout helpers */
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        .pill { display: inline-block; background: #eef3f6; color: #21313c; padding: 6px 10px; border-radius: 999px; margin: 4px 6px 0 0; font-size: 0.92em; }
+        .muted { color: #666; }
 
         /* Roast Section */
-        .roast {
-            background-color: #ffeb3b;
-            padding: 20px;
-            border-left: 5px solid #f44336;
-            margin-top: 20px;
-        }
+        .roast { background-color: #ffeb3b; padding: 20px; border-left: 5px solid #f44336; margin-top: 20px; }
 
-        /* Responsive Design */
+        /* Experience */
+        .xp-item { margin-bottom: 18px; }
+        .xp-item h3 { margin-bottom: 6px; }
+        .xp-meta { font-size: 0.95em; color: #666; }
+
+        @media (max-width: 900px) { .grid { grid-template-columns: 1fr; } }
         @media (max-width: 768px) {
-            header h1 {
-                font-size: 2.5em;
-            }
-
-            header p {
-                font-size: 1em;
-            }
-        }
-
-        @media (max-width: 480px) {
-            header h1 {
-                font-size: 2em;
-            }
-
-            .container {
-                padding: 0 10px;
-            }
+            header h1 { font-size: 2.5em; }
+            header p { font-size: 1em; }
+            .container { padding: 0 10px; }
         }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>Lukas Pastva</h1>
-        <p>DevOps Extraordinaire & Tech Wizard 🧙‍♂️</p>
+        <h1>Lukáš Pastva</h1>
+        <p>DevOps & Pre‑Sales Architect — building platforms, pipelines, and character by roasting myself 🧙‍♂️🔥</p>
     </header>
 
     <div class="container">
-        <!-- Tech Skills Section -->
-        <section>
-            <h2>🛠️ Tech Skills</h2>
-            <ul>
-                <li>Python: Because sometimes, snakes are friendlier than bugs.</li>
-                <li>Java: Brewing code one cup at a time.</li>
-                <li>AWS: Cloud so high, it’s practically in space.</li>
-                <li>Kubernetes: Orchestrating containers like a maestro conducts an orchestra.</li>
-                <li>Terraform: Turning your coffee into infrastructure.</li>
-                <li>GitHub Actions: Automating more than just my procrastination.</li>
-                <li>Docker: Because shipping your code shouldn’t require actual boats.</li>
-                <li>Prometheus: Watching your systems like a hawk... or maybe more like a vigilant parent.</li>
-                <li>Terragrunt: Making the earth quake... with infrastructure as code!</li>
-                <li>PHP: Because sometimes, you just need to script things your way.</li>
-            </ul>
-            <a href="https://cv.lukaspastva.sk" class="button" target="_blank">🔍 View Full CV</a>
-            <a href="https://achievements.lukaspastva.sk" class="button" target="_blank">🔍 View Achievements</a>
+        <!-- Intro / Contacts -->
+        <section aria-labelledby="intro">
+            <h2 id="intro">👋 Who Am I</h2>
+            <p class="muted">16+ years in IT. Built SaaS platforms, led CI/CD and Observability, did pre‑sales magic, and occasionally summoned Kubernetes demons on purpose. Results‑driven, caffeine‑powered.</p>
+            <div class="grid" role="list">
+                <div role="listitem">
+                    <h3>Contact</h3>
+                    <ul>
+                        <li>Phone: <a href="tel:+421917744049">+421 917 744 049</a></li>
+                        <li>Email: <a href="mailto:info@lukaspastva.sk">info@lukaspastva.sk</a></li>
+                        <li>Address: Malinovo, Slovakia</li>
+                    </ul>
+                    <a href="https://cv.lukaspastva.sk" class="button" target="_blank" rel="noopener">📄 Open CV (PDF)</a>
+                    <a href="https://achievements.lukaspastva.sk" class="button" target="_blank" rel="noopener">🏆 Achievements</a>
+                </div>
+                <div role="listitem">
+                    <h3>Social</h3>
+                    <ul>
+                        <li><a href="https://linkedin.com/in/lukas-pastva" target="_blank" rel="noopener">LinkedIn</a></li>
+                        <li><a href="https://github.com/lukas-pastva" target="_blank" rel="noopener">GitHub</a></li>
+                        <li><a href="https://lukaspastva.com" target="_blank" rel="noopener">lukaspastva.com</a></li>
+                        <li><a href="https://tronic.sk" target="_blank" rel="noopener">tronic.sk</a></li>
+                    </ul>
+                </div>
+            </div>
         </section>
 
-        <!-- Soft Skills Section -->
-        <section>
-            <h2>🧠 Soft Skills</h2>
+        <!-- Skills -->
+        <section aria-labelledby="skills">
+            <h2 id="skills">🛠️ Technical Skills (with unapologetic honesty)</h2>
+            <h3>Cloud & DevOps</h3>
+            <p>
+                <span class="pill">AWS</span>
+                <span class="pill">GCP</span>
+                <span class="pill">Azure</span>
+                <span class="pill">DigitalOcean</span>
+                <span class="pill">Vultr</span>
+                <span class="pill">Linode</span>
+                <span class="pill">Contabo</span>
+            </p>
+            <h3>Containers & Orchestration</h3>
+            <p>
+                <span class="pill">Kubernetes (RKE2, EKS, AKS, GKE)</span>
+                <span class="pill">Docker</span>
+                <span class="pill">ArgoCD</span>
+                <span class="pill">docker-compose</span>
+                <span class="pill">Helm</span>
+            </p>
+            <h3>CI/CD</h3>
+            <p>
+                <span class="pill">GitHub Actions</span>
+                <span class="pill">GitLab CI</span>
+                <span class="pill">Jenkins</span>
+                <span class="pill">TeamCity</span>
+            </p>
+            <h3>IaC & Automation</h3>
+            <p>
+                <span class="pill">Terraform</span>
+                <span class="pill">Ansible</span>
+                <span class="pill">Salt</span>
+            </p>
+            <h3>Software & Web</h3>
+            <p>
+                <span class="pill">.NET C#</span>
+                <span class="pill">Java</span>
+                <span class="pill">PHP</span>
+                <span class="pill">JavaScript</span>
+                <span class="pill">Python</span>
+                <span class="pill">HTML/CSS</span>
+                <span class="pill">REST</span>
+                <span class="pill">Apache/IIS/Tomcat</span>
+            </p>
+            <h3>Data</h3>
+            <p>
+                <span class="pill">MySQL</span>
+                <span class="pill">MSSQL</span>
+                <span class="pill">Oracle</span>
+                <span class="pill">ElasticSearch</span>
+                <span class="pill">InfluxDB</span>
+            </p>
+            <h3>Observability & Platforms</h3>
+            <p>
+                <span class="pill">Prometheus</span>
+                <span class="pill">Thanos</span>
+                <span class="pill">Loki</span>
+                <span class="pill">Tempo</span>
+                <span class="pill">Grafana</span>
+                <span class="pill">Dynatrace</span>
+                <span class="pill">Datadog</span>
+                <span class="pill">CheckMK</span>
+                <span class="pill">Istio</span>
+                <span class="pill">Jaeger</span>
+                <span class="pill">Zipkin</span>
+                <span class="pill">Nexus</span>
+            </p>
+            <h3>Security & Ops</h3>
+            <p>
+                <span class="pill">TLS</span>
+                <span class="pill">SSH</span>
+                <span class="pill">Cloudflare API</span>
+                <span class="pill">Windows Server</span>
+                <span class="pill">ServiceNow</span>
+                <span class="pill">BizTalk</span>
+                <span class="pill">ServiceBus</span>
+                <span class="pill">ITIL</span>
+                <span class="pill">Agile</span>
+            </p>
+            <h3>Chaos & Misc</h3>
+            <p>
+                <span class="pill">Chaos Engineering (Gremlin)</span>
+                <span class="pill">Mailu</span>
+                <span class="pill">Traefik</span>
+                <span class="pill">Postman</span>
+                <span class="pill">APIs everywhere</span>
+            </p>
+            <p class="muted">Yes, it’s a lot. No, I don’t deploy all of it at once... anymore.</p>
+        </section>
+
+        <!-- Soft Skills -->
+        <section aria-labelledby="soft">
+            <h2 id="soft">🧠 Soft Skills</h2>
             <ul>
-                <li>Multilingual: Fluent in Slovak, English, German, Polish, and Czech. Because why limit yourself?</li>
-                <li>Communication: Talking to politicians and IT folks without causing a meltdown.</li>
-                <li>Stress Management: Survived 7 years as Ops and 5 years as DevOps without turning into a zombie.</li>
-                <li>Quality Deliverables: Ensuring projects are done when you say so. Yes, you!</li>
+                <li>Natural leader and people manager (herded cats, called it a team).</li>
+                <li>Critical/technical thinker with a delivery mindset (and a calendar full of standups).</li>
+                <li>Understands business trade‑offs: scope, time, cost... and sanity.</li>
+                <li>Receptive to feedback — I even ask for it on purpose.</li>
+                <li>20+ years juggling projects without dropping production (often).</li>
+                <li>Quick learner: new tech, who dis?</li>
             </ul>
         </section>
 
-        <!-- Hobbies Section -->
-        <section>
-            <h2>🎉 Hobbies</h2>
+        <!-- Languages -->
+        <section aria-labelledby="lang">
+            <h2 id="lang">🗣️ Languages</h2>
+            <p>
+                <span class="pill">Slovak — C2</span>
+                <span class="pill">English — C1</span>
+                <span class="pill">German — A2</span>
+                <span class="pill">Polish — A1</span>
+            </p>
+            <p class="muted">I can order coffee in five tongues and debug in six.</p>
+        </section>
+
+        <!-- Experience -->
+        <section aria-labelledby="xp">
+            <h2 id="xp">🧭 Experience</h2>
+            <div class="xp-item">
+                <h3>FatChilliMedia — Platform Engineer, SaaS Architect</h3>
+                <p class="xp-meta">2021–2024, Bratislava • Hetzner • RKE2 • Prometheus • Argo Workflows/CD • Terraform • Docker Compose</p>
+                <p>Built a SaaS platform on top of Kubernetes and IaC. Turned YAML into a lifestyle and infra into repeatable magic. Automation level: coffee → cluster.</p>
+            </div>
+            <div class="xp-item">
+                <h3>Trustsoft — Pre‑Sales Architect, Observability Tech Lead</h3>
+                <p class="xp-meta">2023–2024, Prague • Prometheus/Thanos/Loki/Tempo • Dynatrace • Datadog • CheckMK • GitOps on AWS</p>
+                <p>Designed observability stacks that actually observe. Did pre‑sales for clients across CH/CZ/SK. Migrated apps to AWS and taught GitOps without tears.</p>
+            </div>
+            <div class="xp-item">
+                <h3>Fiserv — Messaging Platform Engineer, DevOps Specialist</h3>
+                <p class="xp-meta">2022–2023, Bratislava • Kafka (Cloudera/MSK/Strimzi) • EKS • Prometheus • JMeter • ArgoCD • GitOps</p>
+                <p>Wrangled Kafka like a rodeo. Modernized legacy deployments to GitOps. Performance tested so services could survive Monday mornings.</p>
+            </div>
+            <div class="xp-item">
+                <h3>DXC Technology — DevOps Team Lead</h3>
+                <p class="xp-meta">2020–2022, Bratislava • 10‑person team • Monitoring for 200+ clients / 500+ servers • AWS • Jenkins • Nexus • Grafana • InfluxDB</p>
+                <p>Led a DevOps team, rolled out monitoring at scale, and answered the eternal question: “Is it down?” with dashboards, not guesses.</p>
+            </div>
+            <div class="xp-item">
+                <h3>DXC Technology — Ops Senior (L4)</h3>
+                <p class="xp-meta">2017–2020, Bratislava • ServiceNow • ITIL • Java • Ansible • AWX • TLS migrations</p>
+                <p>SME and SPOC for case exchange systems. Survived a mass TLS migration with 120 customers and only minor coffee shortages.</p>
+            </div>
+            <div class="xp-item">
+                <h3>Hewlett‑Packard — Ops Medior (L3)</h3>
+                <p class="xp-meta">2014–2016, Bratislava • Windows Server • BizTalk • ServiceBus • .NET • TLS/SSL</p>
+                <p>Onboarded and operated case exchange systems for 120 customers. Migrated 150 servers and lived to tell the tale.</p>
+            </div>
+            <div class="xp-item">
+                <h3>Hewlett‑Packard — Senior Developer</h3>
+                <p class="xp-meta">2013–2014, Bratislava • Asset management app • Java EE</p>
+                <p>Full‑stack dev work, then a brief fling with Java EE. We’re still friends.</p>
+            </div>
+            <div class="xp-item">
+                <h3>ISSA Czech — Senior Developer</h3>
+                <p class="xp-meta">2008–2013, Ostrava • PHP MVC • Oracle • Java • MySQL • Training juniors</p>
+                <p>Built portals for Skylink.cz, Ostrava2015.cz, Ekka‑gold.cz, Viadrus.cz. Wrote code, shipped features, mentored juniors — the full combo.</p>
+            </div>
+        </section>
+
+        <!-- Education -->
+        <section aria-labelledby="edu">
+            <h2 id="edu">🎓 Education</h2>
             <ul>
-                <li>My Wife: The real MVP.</li>
-                <li>Platform Engineering: Because who needs hobbies when you have platforms?</li>
-                <li>Entrepreneurship: Turning ideas into reality... or at least trying.</li>
-                <li>Hardware: PCB design and 3D printing – making things that may or may not explode.</li>
-                <li>Vintage Handheld Audio: Nostalgia hits harder than my code commits.</li>
+                <li><strong>Technical University of Ostrava</strong> — Faculty of Electrical Engineering and Computer Science (2004–2008). Bachelor work: module for Visteon intranet.</li>
+                <li><strong>Secondary Industrial School — Kysucké Nové Mesto</strong> — Mechatronics (2000–2004). Siemens Vienna award: CNC S7‑200 belt conveyor HW+SW. Yes, I used to speak fluent PLC.</li>
+            </ul>
+        </section>
+
+        <!-- Projects & Hobbies -->
+        <section aria-labelledby="hobbies">
+            <h2 id="hobbies">🎉 Projects & Hobbies</h2>
+            <ul>
+                <li>RKE Kubernetes cluster owner, two startups member, DevOps… a lot of DevOps.</li>
+                <li>IoT, 3D printing, PSU and Smart Home hardware. KiCAD, AutoCAD, Arduino, ESP32, rPi — if it blinks, I’m in.</li>
+                <li>Skatepark, kindergarten, and workout design/building — DevOps for the real world.</li>
+                <li>Local newspaper design and publishing; wedding cameraman; occasional philanthropist.</li>
+                <li>Built 100+ websites; created microcontroller hardware; open‑source contributor.</li>
             </ul>
         </section>
 
         <!-- Roast Section -->
-        <section class="roast">
-            <h2>🔥 Roast Me</h2>
-            <p>If coding was a relationship, mine would be "It's complicated." Between juggling too many technologies and trying not to burn out, sometimes I wonder if I’m building infrastructure or just building excuses.</p>
-            <p>My code might be overkill, but hey, who needs simplicity when you have... well, me!</p>
+        <section class="roast" aria-labelledby="roast">
+            <h2 id="roast">🔥 Roast Me</h2>
+            <p>If infrastructure is code, mine is probably over‑engineered enough to file for an art grant. I promise it’s on purpose. Mostly.</p>
+            <p>I speak fluent YAML, occasionally to my coffee machine. Side effects include reliable platforms, smug dashboards, and the inability to explain my job to relatives.</p>
         </section>
     </div>
 
 </body>
 </html>
+
