@@ -13,6 +13,8 @@ RUN mkdir -p /tmp/nginx && \
 
 # Copy the static website files to Nginx's root directory
 COPY html /usr/share/nginx/html
+# Also copy CSS assets into the web root
+COPY css /usr/share/nginx/html/css
 
 # Expose port 80
 EXPOSE 80
