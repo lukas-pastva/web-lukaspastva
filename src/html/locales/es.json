@@ -1,0 +1,156 @@
+{
+  "meta": {
+    "title": "Lukas Pastva - DevOps, Arquitecto Pre-Ventas (y Gremlin del Caos Ocasional)",
+    "description": "Lukas Pastva - Arquitecto DevOps y Pre-Ventas. Kubernetes, AWS, CI/CD, IaC, Observabilidad. Experiencia en SikaLabs, Trustsoft, DXC, Fiserv, HP. Portfolio con una dosis saludable de autoironia."
+  },
+  "header": {
+    "subtitle": "Arquitecto DevOps & Pre-Ventas - construyendo plataformas, pipelines y caracter a traves del autoroast"
+  },
+  "intro": {
+    "title": "Quien soy",
+    "description": "16+ anos en IT. Construi plataformas SaaS, lidere CI/CD y Observabilidad, hice magia de pre-ventas e invoque demonios de Kubernetes a proposito. Orientado a resultados, impulsado por cafeina.",
+    "contact": "Contacto",
+    "phone": "Telefono",
+    "email": "Email",
+    "address": "Direccion",
+    "addressValue": "Malinovo, Eslovaquia",
+    "openCv": "Abrir CV (PDF)",
+    "achievements": "Logros",
+    "social": "Redes Sociales"
+  },
+  "skills": {
+    "title": "Habilidades Tecnicas (con honestidad sin disculpas)",
+    "cloudDevops": "Cloud & DevOps",
+    "containers": "Contenedores & Orquestacion",
+    "cicd": "CI/CD",
+    "iac": "IaC & Automatizacion",
+    "software": "Software & Web",
+    "data": "Datos",
+    "observability": "Observabilidad & Plataformas",
+    "security": "Seguridad & Ops",
+    "chaos": "Caos & Misc",
+    "note": "Si, es mucho. No, ya no despliego todo a la vez... ya no."
+  },
+  "soft": {
+    "title": "Habilidades Blandas",
+    "items": [
+      "Lider natural y gestor de personas (pastoreaba gatos, lo llame equipo).",
+      "Pensador critico/tecnico con mentalidad de entrega (y calendario lleno de standups).",
+      "Entiende los compromisos de negocio: alcance, tiempo, costo... y cordura.",
+      "Receptivo a la retroalimentacion - incluso la pido a proposito.",
+      "20+ anos haciendo malabarismos con proyectos sin dejar caer produccion (a menudo).",
+      "Aprendiz rapido: nueva tecnologia, quien eres?"
+    ]
+  },
+  "languages": {
+    "title": "Idiomas",
+    "note": "Puedo pedir cafe en cinco idiomas y depurar en seis.",
+    "items": {
+      "slovak": "Eslovaco - C2",
+      "english": "Ingles - C1",
+      "german": "Aleman - A2",
+      "polish": "Polaco - A1"
+    }
+  },
+  "experience": {
+    "title": "Experiencia",
+    "jobs": [
+      {
+        "company": "SikaLabs",
+        "role": "Arquitecto Kubernetes",
+        "meta": "2025-presente, Praga - Kubernetes - Helm - ArgoCD - GitOps - Observabilidad - Edge/IoT",
+        "description": "Lidere migraciones de aplicaciones basadas en VM a Kubernetes, disene planes de cutover/rollback y containerice servicios con Helm para releases repetibles. Implemente GitOps con ArgoCD (estructura de apps, flujos de promocion, politicas) para mantener despliegues auditables y automaticos. Construi observabilidad end-to-end (metricas/logs/traces), dashboards, alertas y runbooks para acortar MTTR y mejorar el seguimiento de SLO. Promocione herramientas OSS e integraciones IoT/edge para cargas de trabajo edge ligeras y gestion de flota centralizada."
+      },
+      {
+        "company": "DevOpsGroup",
+        "role": "Arquitecto Kubernetes",
+        "meta": "2025-presente, Bratislava - RKE2/K3s/EKS - ArgoCD - Argo Workflows/Events - Vault - Keycloak - Observabilidad",
+        "description": "Arquitectura de plataformas Kubernetes multi-cluster, estandarizacion de GitOps con Helm y AppProjects, diseno de secrets e identidad (Vault + Keycloak), construccion de stacks de observabilidad y endurecimiento de seguridad. Impulse el autoservicio de desarrolladores, planificacion de costos/capacidad, DR, y soporte pre-ventas con PoCs y diagramas."
+      },
+      {
+        "company": "O2 Slovakia",
+        "role": "CI/CD Team Lead, Technical Lead",
+        "meta": "2024-presente, Bratislava - GitLab Premium - Nexus - SonarQube - ArgoCD - Argo Workflows/Events - RKE2/AKS - Prometheus",
+        "description": "Lidere un equipo CI/CD de 6 personas; propietario de GitLab y workflows de release; migre 80 microservicios (700 repos) a K8s en 7 clusters; implemente GitOps; construi exporters y herramientas internas; entrene a 100+ devs y Ops en Helm/K8s; coordine con liderazgo para alcanzar hitos sin sacrificar uptime (ni todo el cafe)."
+      },
+      {
+        "company": "FatChilliMedia",
+        "role": "Platform Engineer, Arquitecto SaaS",
+        "meta": "2021-2024, Bratislava - Hetzner - RKE2 - Prometheus - Argo Workflows/CD - Terraform - Docker Compose",
+        "description": "Construi una plataforma SaaS sobre Kubernetes e IaC. Converti YAML en un estilo de vida e infra en magia repetible. Nivel de automatizacion: cafe a cluster."
+      },
+      {
+        "company": "Trustsoft",
+        "role": "Arquitecto Pre-Ventas, Observability Tech Lead",
+        "meta": "2023-2024, Praga - Prometheus/Thanos/Loki/Tempo - Dynatrace - Datadog - CheckMK - GitOps en AWS",
+        "description": "Disene stacks de observabilidad que realmente observan. Hice pre-ventas para clientes en CH/CZ/SK. Migre apps a AWS y ensene GitOps sin lagrimas."
+      },
+      {
+        "company": "Fiserv",
+        "role": "Messaging Platform Engineer, DevOps Specialist",
+        "meta": "2022-2023, Bratislava - Kafka (Cloudera/MSK/Strimzi) - EKS - Prometheus - JMeter - ArgoCD - GitOps",
+        "description": "Dome Kafka como en un rodeo. Modernize deployments legacy a GitOps. Pruebas de rendimiento para que los servicios sobrevivan los lunes por la manana."
+      },
+      {
+        "company": "DXC Technology",
+        "role": "DevOps Team Lead",
+        "meta": "2020-2022, Bratislava - equipo de 10 personas - Monitoreo para 200+ clientes / 500+ servidores - AWS - Jenkins - Nexus - Grafana - InfluxDB",
+        "description": "Lidere un equipo DevOps, implemente monitoreo a escala, y respondi la pregunta eterna: \"Esta caido?\" con dashboards, no adivinanzas."
+      },
+      {
+        "company": "DXC Technology",
+        "role": "Ops Senior (L4)",
+        "meta": "2017-2020, Bratislava - ServiceNow - ITIL - Java - Ansible - AWX - Migraciones TLS",
+        "description": "SME y SPOC para sistemas de intercambio de casos. Sobrevivi una migracion masiva de TLS con 120 clientes y solo escasez menor de cafe."
+      },
+      {
+        "company": "Hewlett-Packard",
+        "role": "Ops Medior (L3)",
+        "meta": "2014-2016, Bratislava - Windows Server - BizTalk - ServiceBus - .NET - TLS/SSL",
+        "description": "Incorpore y opere sistemas de intercambio de casos para 120 clientes. Migre 150 servidores y vivi para contarlo."
+      },
+      {
+        "company": "Hewlett-Packard",
+        "role": "Senior Developer",
+        "meta": "2013-2014, Bratislava - App de gestion de activos - Java EE",
+        "description": "Trabajo full-stack, luego un breve romance con Java EE. Todavia somos amigos."
+      },
+      {
+        "company": "ISSA Czech",
+        "role": "Senior Developer",
+        "meta": "2008-2013, Ostrava - PHP MVC - Oracle - Java - MySQL - Entrenamiento de juniors",
+        "description": "Construi portales para Skylink.cz, Ostrava2015.cz, Ekka-gold.cz, Viadrus.cz. Escribi codigo, envie features, mentoree juniors - el combo completo."
+      }
+    ]
+  },
+  "education": {
+    "title": "Educacion",
+    "items": [
+      {
+        "school": "Universidad Tecnica de Ostrava",
+        "description": "Facultad de Ingenieria Electrica e Informatica (2004-2008). Trabajo de bachillerato: modulo para intranet de Visteon."
+      },
+      {
+        "school": "Escuela Secundaria Industrial - Kysucke Nove Mesto",
+        "description": "Mecatronica (2000-2004). Premio Siemens Viena: transportador de cinta CNC S7-200 HW+SW. Si, solia hablar PLC fluido."
+      }
+    ]
+  },
+  "hobbies": {
+    "title": "Proyectos & Hobbies",
+    "items": [
+      "Propietario de cluster RKE Kubernetes, miembro de dos startups, DevOps... mucho DevOps.",
+      "IoT, impresion 3D, PSU y hardware Smart Home. KiCAD, AutoCAD, Arduino, ESP32, rPi - si parpadea, estoy dentro.",
+      "Diseno y construccion de skatepark, jardin de infantes y area de ejercicios - DevOps para el mundo real.",
+      "Diseno y publicacion de periodico local; camarografo de bodas; filantopo ocasional.",
+      "Construi 100+ sitios web; cree hardware de microcontroladores; contribuidor open-source."
+    ]
+  },
+  "roast": {
+    "title": "Roasteame",
+    "content": [
+      "Si la infraestructura es codigo, la mia probablemente esta suficientemente sobre-ingenierizada para solicitar una beca de arte. Prometo que es a proposito. Mayormente.",
+      "Hablo YAML fluido, ocasionalmente a mi cafetera. Los efectos secundarios incluyen plataformas confiables, dashboards presumidos, y la incapacidad de explicar mi trabajo a familiares."
+    ]
+  }
+}

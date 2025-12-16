@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lukáš Pastva — DevOps, Pre‑Sales Architect (and Occasional Chaos Gremlin)</title>
-    <meta name="description" content="Lukáš Pastva — DevOps and Pre‑Sales Architect. Kubernetes, AWS, CI/CD, IaC, Observability. Experience at SikaLabs, Trustsoft, DXC, Fiserv, HP. Portfolio with a healthy dose of self‑roast." />
+    <title>Lukas Pastva - DevOps, Pre-Sales Architect (and Occasional Chaos Gremlin)</title>
+    <meta name="description" content="Lukas Pastva - DevOps and Pre-Sales Architect. Kubernetes, AWS, CI/CD, IaC, Observability. Experience at SikaLabs, Trustsoft, DXC, Fiserv, HP. Portfolio with a healthy dose of self-roast." />
     <style>
         /* Reset */
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -22,6 +22,7 @@
             padding: 50px 0;
             background-color: #35424a;
             color: #ffffff;
+            position: relative;
         }
 
         header h1 { font-size: 3em; margin-bottom: 10px; }
@@ -34,7 +35,7 @@
         h3 { margin-bottom: 8px; color: #21313c; }
         ul { list-style: none; }
         li { margin-bottom: 10px; position: relative; padding-left: 20px; }
-        li::before { content: "👉"; position: absolute; left: 0; color: #35424a; }
+        li::before { content: "->"; position: absolute; left: 0; color: #35424a; }
 
         a.button {
             display: inline-block;
@@ -61,41 +62,72 @@
         .xp-item h3 { margin-bottom: 6px; }
         .xp-meta { font-size: 0.95em; color: #666; }
 
+        /* Language Switcher */
+        .lang-switcher {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            display: flex;
+            gap: 8px;
+        }
+        .lang-btn {
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.3);
+            color: #fff;
+            padding: 6px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.85em;
+            font-weight: 600;
+            transition: all 0.2s ease;
+        }
+        .lang-btn:hover {
+            background: rgba(255,255,255,0.2);
+        }
+        .lang-btn.active {
+            background: #fff;
+            color: #35424a;
+        }
+
         @media (max-width: 900px) { .grid { grid-template-columns: 1fr; } }
         @media (max-width: 768px) {
             header h1 { font-size: 2.5em; }
             header p { font-size: 1em; }
             .container { padding: 0 10px; }
+            .lang-switcher {
+                position: static;
+                justify-content: center;
+                margin-bottom: 15px;
+            }
         }
     </style>
-    <meta name="description" content="Lukáš Pastva — DevOps and Pre‑Sales Architect. Kubernetes, AWS, CI/CD, IaC, Observability. Experience at Trustsoft, DXC, Fiserv, HP. Portfolio with a healthy dose of self‑roast." />
     <link rel="stylesheet" href="/css/site.css">
 </head>
 <body>
 
     <header>
-        <h1>Lukáš Pastva</h1>
-        <p>DevOps & Pre‑Sales Architect — building platforms, pipelines, and character by roasting myself 🧙‍♂️🔥</p>
+        <h1>Lukas Pastva</h1>
+        <p data-i18n="header.subtitle">DevOps & Pre-Sales Architect - building platforms, pipelines, and character by roasting myself</p>
     </header>
 
     <div class="container">
         <!-- Intro / Contacts -->
         <section aria-labelledby="intro">
-            <h2 id="intro">👋 Who Am I</h2>
-            <p class="muted">16+ years in IT. Built SaaS platforms, led CI/CD and Observability, did pre‑sales magic, and occasionally summoned Kubernetes demons on purpose. Results‑driven, caffeine‑powered.</p>
+            <h2 id="intro"><span data-i18n="intro.title">Who Am I</span></h2>
+            <p class="muted" data-i18n="intro.description">16+ years in IT. Built SaaS platforms, led CI/CD and Observability, did pre-sales magic, and occasionally summoned Kubernetes demons on purpose. Results-driven, caffeine-powered.</p>
             <div class="grid" role="list">
                 <div role="listitem">
-                    <h3>Contact</h3>
+                    <h3 data-i18n="intro.contact">Contact</h3>
                     <ul>
-                        <li>Phone: <a href="tel:+421917744049">+421 917 744 049</a></li>
-                        <li>Email: <a href="mailto:info@lukaspastva.sk">info@lukaspastva.sk</a></li>
-                        <li>Address: Malinovo, Slovakia</li>
+                        <li><span data-i18n="intro.phone">Phone</span>: <a href="tel:+421917744049">+421 917 744 049</a></li>
+                        <li><span data-i18n="intro.email">Email</span>: <a href="mailto:info@lukaspastva.sk">info@lukaspastva.sk</a></li>
+                        <li><span data-i18n="intro.address">Address</span>: <span data-i18n="intro.addressValue">Malinovo, Slovakia</span></li>
                     </ul>
-                    <a href="https://cv.lukaspastva.sk" class="button" target="_blank" rel="noopener">📄 Open CV (PDF)</a>
-                    <a href="https://achievements.lukaspastva.sk" class="button" target="_blank" rel="noopener">🏆 Achievements</a>
+                    <a href="https://cv.lukaspastva.sk" class="button" target="_blank" rel="noopener"><span data-i18n="intro.openCv">Open CV (PDF)</span></a>
+                    <a href="https://achievements.lukaspastva.sk" class="button" target="_blank" rel="noopener"><span data-i18n="intro.achievements">Achievements</span></a>
                 </div>
                 <div role="listitem">
-                    <h3>Social</h3>
+                    <h3 data-i18n="intro.social">Social</h3>
                     <ul>
                         <li><a href="https://linkedin.com/in/lukas-pastva" target="_blank" rel="noopener">LinkedIn</a></li>
                         <li><a href="https://github.com/lukas-pastva" target="_blank" rel="noopener">GitHub</a></li>
@@ -108,8 +140,8 @@
 
         <!-- Skills -->
         <section aria-labelledby="skills">
-            <h2 id="skills">🛠️ Technical Skills (with unapologetic honesty)</h2>
-            <h3>Cloud & DevOps</h3>
+            <h2 id="skills"><span data-i18n="skills.title">Technical Skills (with unapologetic honesty)</span></h2>
+            <h3 data-i18n="skills.cloudDevops">Cloud & DevOps</h3>
             <p>
                 <span class="pill">AWS</span>
                 <span class="pill">GCP</span>
@@ -119,7 +151,7 @@
                 <span class="pill">Linode</span>
                 <span class="pill">Contabo</span>
             </p>
-            <h3>Containers & Orchestration</h3>
+            <h3 data-i18n="skills.containers">Containers & Orchestration</h3>
             <p>
                 <span class="pill">Kubernetes (RKE2, EKS, AKS, GKE)</span>
                 <span class="pill">Docker</span>
@@ -127,21 +159,21 @@
                 <span class="pill">docker-compose</span>
                 <span class="pill">Helm</span>
             </p>
-            <h3>CI/CD</h3>
+            <h3 data-i18n="skills.cicd">CI/CD</h3>
             <p>
                 <span class="pill">GitHub Actions</span>
                 <span class="pill">GitLab CI</span>
                 <span class="pill">Jenkins</span>
                 <span class="pill">TeamCity</span>
             </p>
-            <h3>IaC & Automation</h3>
+            <h3 data-i18n="skills.iac">IaC & Automation</h3>
             <p>
                 <span class="pill">Terraform</span>
                 <span class="pill">Ansible</span>
                 <span class="pill">Salt</span>
             </p>
-            
-            <h3>Software & Web</h3>
+
+            <h3 data-i18n="skills.software">Software & Web</h3>
             <p>
                 <span class="pill">.NET C#</span>
                 <span class="pill">Java</span>
@@ -152,7 +184,7 @@
                 <span class="pill">REST</span>
                 <span class="pill">Apache/IIS/Tomcat</span>
             </p>
-            <h3>Data</h3>
+            <h3 data-i18n="skills.data">Data</h3>
             <p>
                 <span class="pill">MySQL</span>
                 <span class="pill">MSSQL</span>
@@ -160,7 +192,7 @@
                 <span class="pill">ElasticSearch</span>
                 <span class="pill">InfluxDB</span>
             </p>
-            <h3>Observability & Platforms</h3>
+            <h3 data-i18n="skills.observability">Observability & Platforms</h3>
             <p>
                 <span class="pill">Prometheus</span>
                 <span class="pill">Thanos</span>
@@ -175,7 +207,7 @@
                 <span class="pill">Zipkin</span>
                 <span class="pill">Nexus</span>
             </p>
-            <h3>Security & Ops</h3>
+            <h3 data-i18n="skills.security">Security & Ops</h3>
             <p>
                 <span class="pill">TLS</span>
                 <span class="pill">SSH</span>
@@ -187,7 +219,7 @@
                 <span class="pill">ITIL</span>
                 <span class="pill">Agile</span>
             </p>
-            <h3>Chaos & Misc</h3>
+            <h3 data-i18n="skills.chaos">Chaos & Misc</h3>
             <p>
                 <span class="pill">Chaos Engineering (Gremlin)</span>
                 <span class="pill">Mailu</span>
@@ -195,17 +227,17 @@
                 <span class="pill">Postman</span>
                 <span class="pill">APIs everywhere</span>
             </p>
-            <p class="muted">Yes, it’s a lot. No, I don’t deploy all of it at once... anymore.</p>
+            <p class="muted" data-i18n="skills.note">Yes, it's a lot. No, I don't deploy all of it at once... anymore.</p>
         </section>
 
         <!-- Soft Skills -->
         <section aria-labelledby="soft">
-            <h2 id="soft">🧠 Soft Skills</h2>
-            <ul>
+            <h2 id="soft"><span data-i18n="soft.title">Soft Skills</span></h2>
+            <ul id="soft-skills-list">
                 <li>Natural leader and people manager (herded cats, called it a team).</li>
                 <li>Critical/technical thinker with a delivery mindset (and a calendar full of standups).</li>
-                <li>Understands business trade‑offs: scope, time, cost... and sanity.</li>
-                <li>Receptive to feedback — I even ask for it on purpose.</li>
+                <li>Understands business trade-offs: scope, time, cost... and sanity.</li>
+                <li>Receptive to feedback - I even ask for it on purpose.</li>
                 <li>20+ years juggling projects without dropping production (often).</li>
                 <li>Quick learner: new tech, who dis?</li>
             </ul>
@@ -213,104 +245,109 @@
 
         <!-- Languages -->
         <section aria-labelledby="lang">
-            <h2 id="lang">🗣️ Languages</h2>
-            <p>
-                <span class="pill">Slovak — C2</span>
-                <span class="pill">English — C1</span>
-                <span class="pill">German — A2</span>
-                <span class="pill">Polish — A1</span>
+            <h2 id="lang"><span data-i18n="languages.title">Languages</span></h2>
+            <p id="lang-pills">
+                <span class="pill">Slovak - C2</span>
+                <span class="pill">English - C1</span>
+                <span class="pill">German - A2</span>
+                <span class="pill">Polish - A1</span>
             </p>
-            <p class="muted">I can order coffee in five tongues and debug in six.</p>
+            <p class="muted" data-i18n="languages.note">I can order coffee in five tongues and debug in six.</p>
         </section>
 
         <!-- Experience -->
         <section aria-labelledby="xp">
-            <h2 id="xp">🧭 Experience</h2>
-            <div class="xp-item">
-                <h3>SikaLabs — Kubernetes Architect</h3>
-                <p class="xp-meta">2025–present, Prague • Kubernetes • Helm • ArgoCD • GitOps • Observability • Edge/IoT</p>
-                <p>Led migrations from VM‑based apps to Kubernetes, designed cutover/rollback plans and containerized services with Helm for repeatable releases. Implemented GitOps with ArgoCD (app structure, promotion flows, policies) to keep deployments auditable and hands‑off. Built end‑to‑end observability (metrics/logs/traces), dashboards, alerts and runbooks to shorten MTTR and improve SLO tracking. Championed OSS tooling and IoT/edge integrations for lightweight edge workloads and centralized fleet management.</p>
-            </div>
-            <div class="xp-item">
-                <h3>DevOpsGroup — Kubernetes Architect</h3>
-                <p class="xp-meta">2025–present, Bratislava • RKE2/K3s/EKS • ArgoCD • Argo Workflows/Events • Vault • Keycloak • Observability</p>
-                <p>Architected multi‑cluster Kubernetes platforms, standardized GitOps with Helm and AppProjects, designed secrets and identity (Vault + Keycloak), built observability stacks and hardened security. Drove developer self‑service, cost/capacity planning, DR, and supported pre‑sales with PoCs and diagrams.</p>
-            </div>
-            <div class="xp-item">
-                <h3>O2 Slovakia — CI/CD Team Lead, Technical Lead</h3>
-                <p class="xp-meta">2024–present, Bratislava • GitLab Premium • Nexus • SonarQube • ArgoCD • Argo Workflows/Events • RKE2/AKS • Prometheus</p>
-                <p>Led a 6‑person CI/CD team; owned GitLab and release workflows; migrated 80 microservices (700 repos) to K8s across 7 clusters; implemented GitOps; built exporters and internal tools; trained 100+ devs and Ops on Helm/K8s; coordinated with leadership to hit milestones without sacrificing uptime (or all the coffee).</p>
-            </div>
-            <div class="xp-item">
-                <h3>FatChilliMedia — Platform Engineer, SaaS Architect</h3>
-                <p class="xp-meta">2021–2024, Bratislava • Hetzner • RKE2 • Prometheus • Argo Workflows/CD • Terraform • Docker Compose</p>
-                <p>Built a SaaS platform on top of Kubernetes and IaC. Turned YAML into a lifestyle and infra into repeatable magic. Automation level: coffee → cluster.</p>
-            </div>
-            <div class="xp-item">
-                <h3>Trustsoft — Pre‑Sales Architect, Observability Tech Lead</h3>
-                <p class="xp-meta">2023–2024, Prague • Prometheus/Thanos/Loki/Tempo • Dynatrace • Datadog • CheckMK • GitOps on AWS</p>
-                <p>Designed observability stacks that actually observe. Did pre‑sales for clients across CH/CZ/SK. Migrated apps to AWS and taught GitOps without tears.</p>
-            </div>
-            <div class="xp-item">
-                <h3>Fiserv — Messaging Platform Engineer, DevOps Specialist</h3>
-                <p class="xp-meta">2022–2023, Bratislava • Kafka (Cloudera/MSK/Strimzi) • EKS • Prometheus • JMeter • ArgoCD • GitOps</p>
-                <p>Wrangled Kafka like a rodeo. Modernized legacy deployments to GitOps. Performance tested so services could survive Monday mornings.</p>
-            </div>
-            <div class="xp-item">
-                <h3>DXC Technology — DevOps Team Lead</h3>
-                <p class="xp-meta">2020–2022, Bratislava • 10‑person team • Monitoring for 200+ clients / 500+ servers • AWS • Jenkins • Nexus • Grafana • InfluxDB</p>
-                <p>Led a DevOps team, rolled out monitoring at scale, and answered the eternal question: “Is it down?” with dashboards, not guesses.</p>
-            </div>
-            <div class="xp-item">
-                <h3>DXC Technology — Ops Senior (L4)</h3>
-                <p class="xp-meta">2017–2020, Bratislava • ServiceNow • ITIL • Java • Ansible • AWX • TLS migrations</p>
-                <p>SME and SPOC for case exchange systems. Survived a mass TLS migration with 120 customers and only minor coffee shortages.</p>
-            </div>
-            <div class="xp-item">
-                <h3>Hewlett‑Packard — Ops Medior (L3)</h3>
-                <p class="xp-meta">2014–2016, Bratislava • Windows Server • BizTalk • ServiceBus • .NET • TLS/SSL</p>
-                <p>Onboarded and operated case exchange systems for 120 customers. Migrated 150 servers and lived to tell the tale.</p>
-            </div>
-            <div class="xp-item">
-                <h3>Hewlett‑Packard — Senior Developer</h3>
-                <p class="xp-meta">2013–2014, Bratislava • Asset management app • Java EE</p>
-                <p>Full‑stack dev work, then a brief fling with Java EE. We’re still friends.</p>
-            </div>
-            <div class="xp-item">
-                <h3>ISSA Czech — Senior Developer</h3>
-                <p class="xp-meta">2008–2013, Ostrava • PHP MVC • Oracle • Java • MySQL • Training juniors</p>
-                <p>Built portals for Skylink.cz, Ostrava2015.cz, Ekka‑gold.cz, Viadrus.cz. Wrote code, shipped features, mentored juniors — the full combo.</p>
+            <h2 id="xp"><span data-i18n="experience.title">Experience</span></h2>
+            <div id="xp-container">
+                <div class="xp-item">
+                    <h3>SikaLabs - Kubernetes Architect</h3>
+                    <p class="xp-meta">2025-present, Prague - Kubernetes - Helm - ArgoCD - GitOps - Observability - Edge/IoT</p>
+                    <p>Led migrations from VM-based apps to Kubernetes, designed cutover/rollback plans and containerized services with Helm for repeatable releases. Implemented GitOps with ArgoCD (app structure, promotion flows, policies) to keep deployments auditable and hands-off. Built end-to-end observability (metrics/logs/traces), dashboards, alerts and runbooks to shorten MTTR and improve SLO tracking. Championed OSS tooling and IoT/edge integrations for lightweight edge workloads and centralized fleet management.</p>
+                </div>
+                <div class="xp-item">
+                    <h3>DevOpsGroup - Kubernetes Architect</h3>
+                    <p class="xp-meta">2025-present, Bratislava - RKE2/K3s/EKS - ArgoCD - Argo Workflows/Events - Vault - Keycloak - Observability</p>
+                    <p>Architected multi-cluster Kubernetes platforms, standardized GitOps with Helm and AppProjects, designed secrets and identity (Vault + Keycloak), built observability stacks and hardened security. Drove developer self-service, cost/capacity planning, DR, and supported pre-sales with PoCs and diagrams.</p>
+                </div>
+                <div class="xp-item">
+                    <h3>O2 Slovakia - CI/CD Team Lead, Technical Lead</h3>
+                    <p class="xp-meta">2024-present, Bratislava - GitLab Premium - Nexus - SonarQube - ArgoCD - Argo Workflows/Events - RKE2/AKS - Prometheus</p>
+                    <p>Led a 6-person CI/CD team; owned GitLab and release workflows; migrated 80 microservices (700 repos) to K8s across 7 clusters; implemented GitOps; built exporters and internal tools; trained 100+ devs and Ops on Helm/K8s; coordinated with leadership to hit milestones without sacrificing uptime (or all the coffee).</p>
+                </div>
+                <div class="xp-item">
+                    <h3>FatChilliMedia - Platform Engineer, SaaS Architect</h3>
+                    <p class="xp-meta">2021-2024, Bratislava - Hetzner - RKE2 - Prometheus - Argo Workflows/CD - Terraform - Docker Compose</p>
+                    <p>Built a SaaS platform on top of Kubernetes and IaC. Turned YAML into a lifestyle and infra into repeatable magic. Automation level: coffee to cluster.</p>
+                </div>
+                <div class="xp-item">
+                    <h3>Trustsoft - Pre-Sales Architect, Observability Tech Lead</h3>
+                    <p class="xp-meta">2023-2024, Prague - Prometheus/Thanos/Loki/Tempo - Dynatrace - Datadog - CheckMK - GitOps on AWS</p>
+                    <p>Designed observability stacks that actually observe. Did pre-sales for clients across CH/CZ/SK. Migrated apps to AWS and taught GitOps without tears.</p>
+                </div>
+                <div class="xp-item">
+                    <h3>Fiserv - Messaging Platform Engineer, DevOps Specialist</h3>
+                    <p class="xp-meta">2022-2023, Bratislava - Kafka (Cloudera/MSK/Strimzi) - EKS - Prometheus - JMeter - ArgoCD - GitOps</p>
+                    <p>Wrangled Kafka like a rodeo. Modernized legacy deployments to GitOps. Performance tested so services could survive Monday mornings.</p>
+                </div>
+                <div class="xp-item">
+                    <h3>DXC Technology - DevOps Team Lead</h3>
+                    <p class="xp-meta">2020-2022, Bratislava - 10-person team - Monitoring for 200+ clients / 500+ servers - AWS - Jenkins - Nexus - Grafana - InfluxDB</p>
+                    <p>Led a DevOps team, rolled out monitoring at scale, and answered the eternal question: "Is it down?" with dashboards, not guesses.</p>
+                </div>
+                <div class="xp-item">
+                    <h3>DXC Technology - Ops Senior (L4)</h3>
+                    <p class="xp-meta">2017-2020, Bratislava - ServiceNow - ITIL - Java - Ansible - AWX - TLS migrations</p>
+                    <p>SME and SPOC for case exchange systems. Survived a mass TLS migration with 120 customers and only minor coffee shortages.</p>
+                </div>
+                <div class="xp-item">
+                    <h3>Hewlett-Packard - Ops Medior (L3)</h3>
+                    <p class="xp-meta">2014-2016, Bratislava - Windows Server - BizTalk - ServiceBus - .NET - TLS/SSL</p>
+                    <p>Onboarded and operated case exchange systems for 120 customers. Migrated 150 servers and lived to tell the tale.</p>
+                </div>
+                <div class="xp-item">
+                    <h3>Hewlett-Packard - Senior Developer</h3>
+                    <p class="xp-meta">2013-2014, Bratislava - Asset management app - Java EE</p>
+                    <p>Full-stack dev work, then a brief fling with Java EE. We're still friends.</p>
+                </div>
+                <div class="xp-item">
+                    <h3>ISSA Czech - Senior Developer</h3>
+                    <p class="xp-meta">2008-2013, Ostrava - PHP MVC - Oracle - Java - MySQL - Training juniors</p>
+                    <p>Built portals for Skylink.cz, Ostrava2015.cz, Ekka-gold.cz, Viadrus.cz. Wrote code, shipped features, mentored juniors - the full combo.</p>
+                </div>
             </div>
         </section>
 
         <!-- Education -->
         <section aria-labelledby="edu">
-            <h2 id="edu">🎓 Education</h2>
-            <ul>
-                <li><strong>Technical University of Ostrava</strong> — Faculty of Electrical Engineering and Computer Science (2004–2008). Bachelor work: module for Visteon intranet.</li>
-                <li><strong>Secondary Industrial School — Kysucké Nové Mesto</strong> — Mechatronics (2000–2004). Siemens Vienna award: CNC S7‑200 belt conveyor HW+SW. Yes, I used to speak fluent PLC.</li>
+            <h2 id="edu"><span data-i18n="education.title">Education</span></h2>
+            <ul id="edu-list">
+                <li><strong>Technical University of Ostrava</strong> - Faculty of Electrical Engineering and Computer Science (2004-2008). Bachelor work: module for Visteon intranet.</li>
+                <li><strong>Secondary Industrial School - Kysucke Nove Mesto</strong> - Mechatronics (2000-2004). Siemens Vienna award: CNC S7-200 belt conveyor HW+SW. Yes, I used to speak fluent PLC.</li>
             </ul>
         </section>
 
         <!-- Projects & Hobbies -->
         <section aria-labelledby="hobbies">
-            <h2 id="hobbies">🎉 Projects & Hobbies</h2>
-            <ul>
-                <li>RKE Kubernetes cluster owner, two startups member, DevOps… a lot of DevOps.</li>
-                <li>IoT, 3D printing, PSU and Smart Home hardware. KiCAD, AutoCAD, Arduino, ESP32, rPi — if it blinks, I’m in.</li>
-                <li>Skatepark, kindergarten, and workout design/building — DevOps for the real world.</li>
+            <h2 id="hobbies"><span data-i18n="hobbies.title">Projects & Hobbies</span></h2>
+            <ul id="hobbies-list">
+                <li>RKE Kubernetes cluster owner, two startups member, DevOps... a lot of DevOps.</li>
+                <li>IoT, 3D printing, PSU and Smart Home hardware. KiCAD, AutoCAD, Arduino, ESP32, rPi - if it blinks, I'm in.</li>
+                <li>Skatepark, kindergarten, and workout design/building - DevOps for the real world.</li>
                 <li>Local newspaper design and publishing; wedding cameraman; occasional philanthropist.</li>
-                <li>Built 100+ websites; created microcontroller hardware; open‑source contributor.</li>
+                <li>Built 100+ websites; created microcontroller hardware; open-source contributor.</li>
             </ul>
         </section>
 
         <!-- Roast Section -->
         <section class="roast" aria-labelledby="roast">
-            <h2 id="roast">🔥 Roast Me</h2>
-            <p>If infrastructure is code, mine is probably over‑engineered enough to file for an art grant. I promise it’s on purpose. Mostly.</p>
-            <p>I speak fluent YAML, occasionally to my coffee machine. Side effects include reliable platforms, smug dashboards, and the inability to explain my job to relatives.</p>
+            <h2 id="roast"><span data-i18n="roast.title">Roast Me</span></h2>
+            <div id="roast-content">
+                <p>If infrastructure is code, mine is probably over-engineered enough to file for an art grant. I promise it's on purpose. Mostly.</p>
+                <p>I speak fluent YAML, occasionally to my coffee machine. Side effects include reliable platforms, smug dashboards, and the inability to explain my job to relatives.</p>
+            </div>
         </section>
     </div>
 
+    <script src="/js/i18n.js"></script>
 </body>
 </html>
