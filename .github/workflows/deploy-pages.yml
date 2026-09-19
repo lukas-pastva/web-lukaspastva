@@ -24,7 +24,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      # Rovnake rozlozenie ako v Dockerfile: src/html je web root, src/css ide do /css
+      # src/html je web root, src/css ide do /css
       - name: Assemble static site
         run: |
           mkdir -p dist
