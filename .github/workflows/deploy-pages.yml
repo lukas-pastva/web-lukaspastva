@@ -1,0 +1,40 @@
+name: Deploy to Cloudflare Pages
+
+# Pages projekt, custom domeny a DNS spravuje terraform v tronic-sk/kubernetes
+# (clusters/in-cluster/values/terraform.yaml -> pages). Tu sa nasadzuje len obsah.
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+env:
+  PAGES_PROJECT: web-lukaspastva
+  CLOUDFLARE_ACCOUNT_ID: f6c7a500a63153b3e7a2c16afd09140f
+  CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # Rovnake rozlozenie ako v Dockerfile: src/html je web root, src/css ide do /css
+      - name: Assemble static site
+        run: |
+          mkdir -p dist
+          cp -r src/html/. dist/
+          cp -r src/css dist/css
+
+      - name: Skip when Cloudflare token is not configured
+        if: env.CLOUDFLARE_API_TOKEN == ''
+        run: echo "::notice::Secret CLOUDFLARE_API_TOKEN is not set, skipping Cloudflare Pages deploy."
+
+      - name: Deploy to Cloudflare Pages
+        if: env.CLOUDFLARE_API_TOKEN != ''
+        run: npx --yes wrangler@4 pages deploy dist --project-name="$PAGES_PROJECT" --branch=main --commit-dirty=true
